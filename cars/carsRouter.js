@@ -6,9 +6,9 @@ const router = express.Router();
 router.get("/", (req,res)=>{
  db("cars")
  .then(car=>{
-     res.json(200).json(car)
+     res.status(200).json(car)
  })
- .catchs(error=>{
+ .catch(error=>{
      res.status(500).json({
          error: `This is an error${error}`
      });

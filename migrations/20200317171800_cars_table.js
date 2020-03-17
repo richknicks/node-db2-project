@@ -1,13 +1,13 @@
 
 exports.up = function(knex) {
-  return knex.schema.table("cars", tbl => {
+  return knex.schema.createTable("cars", tbl => {
       tbl.increments();
       tbl.string("VIN").notNullable().index()
-      tbl.string("make").notNullable().index()
-      tbl.string("model").notNullable().index()
-      tbl.integer("mileage").notNullable().index()
-      tbl.string("transmission")
-      tbl.string("title")
+      tbl.string("Make").notNullable().index()
+      tbl.string("Model").notNullable().index()
+      tbl.integer("Mileage").notNullable().index()
+      tbl.string("Transmission")
+      tbl.string("Title")
   })
 };
 
